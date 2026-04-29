@@ -1,3 +1,4 @@
+```markdown
 # HotelCheck Roadmap
 
 ## Project Vision
@@ -26,17 +27,23 @@ The MVP includes:
 - ensure create, edit, and delete operations work reliably
 - improve saving and loading of local data
 
-### Stage 3 — Reservation Workflow
+### Stage 3 — Reservation Workflow (**Complete**)
 - improve reservation creation flow
 - connect reservations clearly to rooms and guests
 - validate reservation dates
 - reduce the risk of incorrect booking records
+- implement reservation validation module using the Strategy pattern
 
 ### Stage 4 — MVP Stabilization
 - improve UI clarity and usability
 - remove obvious bugs
 - improve code readability and maintainability
 - prepare the project for demonstration and course reporting
+
+## Scope Adjustments
+- Reservation validation was separated into a dedicated module.
+- Validation logic is now structured as independent strategies instead of a single combined method.
+- This improves maintainability and makes future validation rules easier to add.
 
 ## Deferred to Future Releases
 The following items are outside the MVP and may be added later:
