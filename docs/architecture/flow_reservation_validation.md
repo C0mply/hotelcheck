@@ -1,17 +1,20 @@
-# Flow: Reservation Validation
+# Flow: Reservation Validation Module
 
 ```mermaid
 flowchart TD
-    A[Start reservation request] --> B[Check input data]
-    B --> C{Check-out date > Check-in date?}
+    UI[Reservation Form / UI] --> SVC[ReservationValidationService]
 
-    C -- No --> D[Return validation error: invalid date range]
-    C -- Yes --> E[Check room availability for selected dates]
+    SVC --> STR1[RoomExistsValidationStrategy]
+    SVC --> STR2[DateRangeValidationStrategy]
+    SVC --> STR3[RoomAvailabilityValidationStrategy]
 
-    E --> F{Room available?}
-    F -- No --> G[Return validation error: room unavailable]
-    F -- Yes --> H[Return success: reservation can be created]
+    ROOM[Room existence input] --> STR1
+    REQ[ReservationRequest] --> STR2
+    REQ --> STR3
+    RESLIST[Existing reservations input] --> STR3
 
-    D --> I[End]
-    G --> I
-    H --> I
+    STR1 --> RESULT[ValidationResult]
+    STR2 --> RESULT
+    STR3 --> RESULT
+
+    RESULT --> WORKFLOW[Reservation creation workflow]
