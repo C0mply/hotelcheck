@@ -1,9 +1,9 @@
 # HotelCheck UI Design Contract
 
 ## Framework Choice
-- Use **HTML, CSS, and Vanilla JavaScript** for the web interface.
+- Use HTML, CSS, and Vanilla JavaScript for the web interface.
 - Do not introduce React, Tailwind, or other frontend frameworks.
-- The UI must connect to the reservation validation logic implemented in `web/app.js`.
+- The UI must connect to the reservation validation logic implemented in web/app.js.
 
 ## Color Palette
 - Primary: `#2563EB`
@@ -17,7 +17,7 @@
 - Error: `#DC2626`
 
 ## Typography & Spacing
-- Use **Segoe UI** as the default font.
+- Use Segoe UI as the default font.
 - Page title: 28px, bold
 - Section heading: 20px, semi-bold
 - Body text: 14px
