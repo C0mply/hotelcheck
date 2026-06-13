@@ -1,9 +1,9 @@
 # HotelCheck UI Design Contract
 
 ## Framework Choice
-- Use **WPF (XAML + C#)** for the user interface.
+- Use **HTML, CSS, and Vanilla JavaScript** for the web interface.
 - Do not introduce React, Tailwind, or other frontend frameworks.
-- The UI must connect directly to the existing reservation validation module.
+- The UI must connect to the reservation validation logic implemented in `web/app.js`.
 
 ## Color Palette
 - Primary: `#2563EB`
@@ -25,7 +25,7 @@
 - Outer page padding: 24px
 - Card padding: 24px
 - Vertical spacing between form rows: 12px
-- Buttons should have at least 40px height.
+- Buttons should have at least 42px height.
 
 ## Component Rules
 - Buttons must always have rounded corners.
@@ -34,8 +34,8 @@
 - Inputs should have clear borders and enough inner padding.
 - Result messages must be shown inside a dedicated result panel.
 - Use one primary action button for validation.
-- Do not duplicate backend validation logic in the UI layer.
-- The UI should only collect input, call the validation module, and display the returned result.
+- Do not duplicate backend validation rules in the UI more than necessary.
+- The UI should collect input, trigger the validation flow, and display the returned result.
 
 ## Accessibility Rules
 - Maintain strong contrast between text and background.
